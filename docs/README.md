@@ -10,6 +10,7 @@ make the portfolio's engineering process as inspectable as its final result.
 | --- | --- | --- |
 | 1. Project foundation | Complete | [01-project-foundation.md](01-project-foundation.md) |
 | 2. Structure-aware ingestion | Complete | [02-structure-aware-ingestion.md](02-structure-aware-ingestion.md) |
+| 3. Baseline dense retrieval | Complete | [03-baseline-dense-retrieval.md](03-baseline-dense-retrieval.md) |
 
 ## Current pipeline boundary
 
@@ -17,9 +18,11 @@ The processed corpus is ready for retrieval work:
 
 ```text
 EU AI Act PDF -> pages -> articles -> paragraphs -> retrieval chunks -> JSONL
+  -> BGE-M3 embeddings -> Qdrant dense search
 ```
 
-Vector indexing, retrieval, and answer generation have not yet been built.
+Dense indexing and retrieval are available. Evaluation, hybrid retrieval,
+reranking, and answer generation have not yet been built.
 
 ## Documentation convention for future stages
 
